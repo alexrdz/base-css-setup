@@ -1,3 +1,6 @@
+$total-columns: 12;
+$gutter-spacing: $spacing-1-5;
+
 //- Container
 .container {
   flex: 1 0 auto;
@@ -29,6 +32,20 @@
   &--between  { justify-content: space-between; }
   &--around   { justify-content: space-around; }
 
+  &--gutters {
+    .grid__cell {
+      padding-left: calc(#{$gutter-spacing} / 2);
+      padding-right: calc(#{$gutter-spacing} / 2);
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+
   @for $index from 1 through $total-columns {
     &--of-#{$index} {
       .grid__cell {
@@ -39,7 +56,13 @@
 }
 
 .grid__cell { 
-  @include cell; 
+  @media (#{$tablet-up}) {
+    @include cell; 
+  }
+
+  .grid--small & {
+    @include cell;
+  }
 
   .grid & {
     &--fill { 
