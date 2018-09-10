@@ -1,0 +1,37 @@
+//- Variables
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+//- Breakpoints
+$mobile-up    : "min-width: 400px" !default;
+$phablet-up   : "min-width: 550px" !default;
+$tablet-up   : "min-width: 750px" !default;
+$desktop-up  : "min-width: 1000px" !default;
+$desktophd-up: "min-width: 1200px" !default;
+
+//- Colors
+$light-grey: #e1e1e1 !default;
+$dark-grey: #333 !default;
+$primary-color: #33c3f0 !default;
+$secondary-color: lighten($dark-grey, 13.5%) !default;
+$border-color: #bbb !default;
+$link-color: #1eaedb !default;
+$font-color: #222 !default;
+
+//- Grid
+$total-columns: 12 !default;
+
+//- Typography
+$font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+//- Grid Variables
+
+//- Spacing Variables
+$spacing-1:     1rem;
+$spacing-1-5:   1.5rem;
+$spacing-2:     2rem;
+$spacing-2-5:   2.5rem;
+$spacing-3:     3rem;
+$spacing-3-5:   3.5rem;
+
+//- Misc
+$global-radius: 4px !default;

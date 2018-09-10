@@ -1,0 +1,10 @@
+@mixin grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin cell {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex: 1;
+}
