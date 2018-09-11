@@ -1,0 +1,68 @@
+@mixin responsive-nav($position) {
+  #{$position}: -100%;
+  position: absolute;
+  transition: #{$position} .3s ease-in-out;
+  
+  &__toggle {
+    #{$position}: 10%;
+    position: absolute;
+  }
+
+  @media (#{$tablet-up}) {
+    position: relative;
+    #{$position}: 0;
+
+    &__toggle {
+      #{$position}: -100%;
+    }
+  }
+
+
+  &__toggle {
+    cursor: pointer;
+    z-index: 5;
+    
+    & + [type=checkbox] {
+      float: left;
+      margin-left: -9999rem;
+      
+      &:checked + nav {
+        #{$position}: 0;
+        display: block;
+      }
+    }
+
+  }
+
+
+  
+}
+
+.nav {
+  margin: 0;
+  @include responsive-nav('right');
+  
+  &--horizontal {
+    @include grid;
+  }
+
+  &--top      { align-items: flex-start; }
+  &--middle   { align-items: center; }
+  &--bottom   { align-items: flex-end; }
+  &--stretch  { align-items: stretch; }
+  &--baseline { align-items: baseline; }
+  &--left     { justify-content: flex-start; }
+  &--center   { justify-content: center; }
+  &--right    { justify-content: flex-end; }
+  &--between  { justify-content: space-between; }
+  &--around   { justify-content: space-around; }
+
+  &__item {
+    margin: 0;
+  }
+
+  
+  
+
+
+}

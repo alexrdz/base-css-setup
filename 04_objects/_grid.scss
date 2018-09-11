@@ -18,19 +18,24 @@ $gutter-spacing: $spacing-1-5;
   }
 }
 
+//- Grid
 .grid { 
-  @include grid; 
+  @include grid;
 
-  &--top      { align-items: flex-start; }
-  &--middle   { align-items: center; }
-  &--bottom   { align-items: flex-end; }
-  &--stretch  { align-items: stretch; }
-  &--baseline { align-items: baseline; }
-  &--left     { justify-content: flex-start; }
-  &--center   { justify-content: center; }
-  &--right    { justify-content: flex-end; }
-  &--between  { justify-content: space-between; }
-  &--around   { justify-content: space-around; }
+  @media (#{$phablet-up}) {
+    &--top      { align-items: flex-start; }
+    &--middle   { align-items: center; }
+    &--bottom   { align-items: flex-end; }
+    &--stretch  { align-items: stretch; }
+    &--baseline { align-items: baseline; }
+    &--left     { justify-content: flex-start; }
+    &--center   { justify-content: center; }
+    &--right    { justify-content: flex-end; }
+    &--between  { justify-content: space-between; }
+    &--around   { justify-content: space-around; }
+  }
+
+
 
   &--gutters {
     .grid__cell {
@@ -46,10 +51,74 @@ $gutter-spacing: $spacing-1-5;
     }
   }
 
+  //- Grid dictates columns
   @for $index from 1 through $total-columns {
     &--of-#{$index} {
       .grid__cell {
         flex: 0 0 calc(100% / #{$index});
+      }
+    }
+  }
+  @media (#{$tablet-up}) {
+    @for $index from 1 through $total-columns {
+      &--of-#{$index}\@md {
+          .grid__cell {
+            flex: 0 0 calc(100% / #{$index});
+          }
+        }
+      }
+  }
+  @media (#{$desktop-up}) {
+    @for $index from 1 through $total-columns {
+      &--of-#{$index}\@lg {
+          .grid__cell {
+            flex: 0 0 calc(100% / #{$index});
+          }
+        }
+      }
+  }
+
+
+  //- Columns form grid
+  @for $index from 1 through $total-columns {
+    .grid__cell--#{$index}-of-#{$total-columns} {
+        @if ($index != $total-columns) {
+          width: calc(100% / #{$total-columns} * #{$index});
+        } @else {
+        width: 100%;
+      }
+    }
+  }
+  @media (#{$mobile-up}) {
+    @for $index from 1 through $total-columns {
+      .grid__cell--#{$index}-of-#{$total-columns}\@sm {
+          @if ($index != $total-columns) {
+            width: calc(100% / #{$total-columns} * #{$index});
+          } @else {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media (#{$tablet-up}) {
+    @for $index from 1 through $total-columns {
+      .grid__cell--#{$index}-of-#{$total-columns}\@md {
+          @if ($index != $total-columns) {
+            width: calc(100% / #{$total-columns} * #{$index});
+          } @else {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media (#{$desktop-up}) {
+    @for $index from 1 through $total-columns {
+      .grid__cell--#{$index}-of-#{$total-columns}\@lg {
+          @if ($index != $total-columns) {
+            width: calc(100% / #{$total-columns} * #{$index});
+          } @else {
+          width: 100%;
+        }
       }
     }
   }
@@ -64,21 +133,13 @@ $gutter-spacing: $spacing-1-5;
     @include cell;
   }
 
+  
   .grid & {
     &--fill { 
       flex-grow: 1; 
     }
-  }
+  }  
 }
 
 
-@for $index from 1 through $total-columns {
-  .grid__cell--#{$index}-of-#{$total-columns} {
-    @if ($index != $total-columns) {
-      width: calc(100% * #{$index} / #{$total-columns});
-    } @else {
-      width: 100%;
-    }
-  }
-}
 
