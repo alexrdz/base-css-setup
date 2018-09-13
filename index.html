@@ -28,10 +28,10 @@
 
 <body>
   
-  <div class="container container--narrow">
+  <div class="container">
     <label for="nav__toggle" class="nav__toggle">Menu</label>
     <input type="checkbox" name="nav__toggle" id="nav__toggle">
-    <nav class="nav nav--horizontal nav--right p-4">
+    <nav class="nav nav--horizontal nav--left p-4">
       <div class="nav__item">
         <a href="#" class="p-4">Home</a>
       </div>
@@ -210,35 +210,37 @@
     
     <section>
         <h3>Forms</h3>
-        <div class="grid grid--center">
-          <form class="grid__cell--12-of-12 grid__cell--10-of-12@md grid__cell--6-of-12@lg">
-              <div class="grid grid--gutters">
-                <div class="grid__cell">
-                  <label for="exampleEmailInput">Your email</label>
-                  <input class="w-100" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
-                </div>
-                <div class="grid__cell">
-                  <label for="exampleRecipientInput">Reason for contacting</label>
-                  <select class="w-100" id="exampleRecipientInput">
-                    <option value="Option 1">Questions</option>
-                    <option value="Option 2">Admiration</option>
-                    <option value="Option 3">Can I get your number?</option>
-                  </select>
-                </div>
+          <form class="">
+            <div class="grid grid--gutters">
+              <div class="grid__cell">
+                <label for="exampleEmailInput">Your email</label>
+                <input class="w-100" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
               </div>
-      
+              <div class="grid__cell">
+                <label for="exampleRecipientInput">Reason for contacting</label>
+                <select class="w-100" id="exampleRecipientInput">
+                  <option value="Option 1">Questions</option>
+                  <option value="Option 2">Admiration</option>
+                  <option value="Option 3">Can I get your number?</option>
+                </select>
+              </div>
+            </div>
+            
+    
+            <div class="">
               <label for="exampleMessage">Message</label>
               <textarea class="w-100" placeholder="Hi Dave …" id="exampleMessage"></textarea>
-              
-              <div class="grid grid--between grid--middle">
-                <label class="example-send-yourself-copy order-1">
-                  <input type="checkbox">
-                  <span class="label-body">Send a copy to yourself</span>
-                </label>
-                <input class="button-primary" type="submit" value="Submit">
-              </div>
-            </form>
-        </div>
+            </div>
+            
+            <div class="grid grid--between grid--middle">
+              <label class="example-send-yourself-copy order-1">
+                <input type="checkbox">
+                <span class="label-body">Send a copy to yourself</span>
+              </label>
+              <input class="button-primary" type="submit" value="Submit">
+            </div>
+
+          </form>
     </section>
 
 

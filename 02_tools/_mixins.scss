@@ -150,3 +150,59 @@
     }
   }
 }
+
+
+
+@mixin responsive-nav($position) {
+  #{$position}: -100%;
+  position: fixed;
+  transition: #{$position} .3s ease-in-out;
+  
+  &__toggle {
+    #{$position}: 10%;
+    position: fixed;
+  }
+
+  @media (#{$tablet-up}) {
+    position: relative;
+    #{$position}: 0;
+
+    &__toggle {
+      #{$position}: -100%;
+    }
+  }
+
+
+  &__toggle {
+    cursor: pointer;
+    z-index: 5;
+    
+    & + [type=checkbox] {
+      float: left;
+      margin-left: -9999rem;
+      
+      + nav {
+        background: $nav-background-color;
+        height: 100%;
+        #{$position}: -100%;
+        padding: 5rem;
+        top: 0;
+        width: 100%;
+
+        @media (#{$tablet-up}) {
+          background: inherit;
+          height: auto;
+          #{$position}: 0;
+          padding: inherit;
+          width: auto;
+        }
+      }
+      
+      &:checked + nav {
+        #{$position}: 0;
+      }
+    }
+
+  }
+  
+}
