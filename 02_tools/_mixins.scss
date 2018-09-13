@@ -5,8 +5,9 @@
 
 @mixin cell {
   box-sizing: border-box;
+  flex-grow: 1;
   flex-shrink: 0;
-  flex: 1;
+  flex-basis: calc(100 / 12 * 1%);
 }
 
 @mixin css3-prefix($property, $value) {
