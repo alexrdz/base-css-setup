@@ -1,49 +1,17 @@
-@mixin responsive-nav($position) {
-  #{$position}: -100%;
-  position: absolute;
-  transition: #{$position} .3s ease-in-out;
-  
-  &__toggle {
-    #{$position}: 10%;
-    position: absolute;
-  }
-
-  @media (#{$tablet-up}) {
-    position: relative;
-    #{$position}: 0;
-
-    &__toggle {
-      #{$position}: -100%;
-    }
-  }
-
-
-  &__toggle {
-    cursor: pointer;
-    z-index: 5;
-    
-    & + [type=checkbox] {
-      float: left;
-      margin-left: -9999rem;
-      
-      &:checked + nav {
-        #{$position}: 0;
-        display: block;
-      }
-    }
-
-  }
-
-
-  
-}
-
 .nav {
   margin: 0;
-  @include responsive-nav('right');
+  @include responsive-nav('left');
   
   &--horizontal {
     @include grid;
+
+    .nav__toggle ~ & {
+      display: block;
+
+      @media (#{$tablet-up}) {
+        display: flex;
+      }
+    }
   }
 
   &--top      { align-items: flex-start; }
