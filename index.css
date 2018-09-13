@@ -411,13 +411,15 @@ p {
   flex-wrap: wrap; }
   .grid--small .grid__cell {
     box-sizing: border-box;
+    flex-grow: 1;
     flex-shrink: 0;
-    flex: 1; }
+    flex-basis: calc(100 / 12 * 1%); }
 @media (min-width: 550px) {
   .grid .grid__cell {
     box-sizing: border-box;
+    flex-grow: 1;
     flex-shrink: 0;
-    flex: 1; } }
+    flex-basis: calc(100 / 12 * 1%); } }
 .grid .grid__cell--fill {
   flex-grow: 1; }
 @media (min-width: 550px) {
@@ -429,79 +431,151 @@ p {
     .grid--gutters > .grid__cell:last-of-type {
       padding-right: 0; } }
 .grid--of-1 .grid__cell {
-  flex: 0 0 calc(100% / 1); }
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(100 / 1 * 1%); }
 .grid--of-2 .grid__cell {
-  flex: 0 0 calc(100% / 2); }
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(100 / 2 * 1%); }
 .grid--of-3 .grid__cell {
-  flex: 0 0 calc(100% / 3); }
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(100 / 3 * 1%); }
 .grid--of-4 .grid__cell {
-  flex: 0 0 calc(100% / 4); }
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(100 / 4 * 1%); }
 .grid--of-5 .grid__cell {
-  flex: 0 0 calc(100% / 5); }
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(100 / 5 * 1%); }
 .grid--of-6 .grid__cell {
-  flex: 0 0 calc(100% / 6); }
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(100 / 6 * 1%); }
 .grid--of-7 .grid__cell {
-  flex: 0 0 calc(100% / 7); }
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(100 / 7 * 1%); }
 .grid--of-8 .grid__cell {
-  flex: 0 0 calc(100% / 8); }
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(100 / 8 * 1%); }
 .grid--of-9 .grid__cell {
-  flex: 0 0 calc(100% / 9); }
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(100 / 9 * 1%); }
 .grid--of-10 .grid__cell {
-  flex: 0 0 calc(100% / 10); }
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(100 / 10 * 1%); }
 .grid--of-11 .grid__cell {
-  flex: 0 0 calc(100% / 11); }
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(100 / 11 * 1%); }
 .grid--of-12 .grid__cell {
-  flex: 0 0 calc(100% / 12); }
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(100 / 12 * 1%); }
 @media (min-width: 750px) {
   .grid--of-1\@md .grid__cell {
-    flex: 0 0 calc(100% / 1); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 1 * 1%); }
   .grid--of-2\@md .grid__cell {
-    flex: 0 0 calc(100% / 2); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 2 * 1%); }
   .grid--of-3\@md .grid__cell {
-    flex: 0 0 calc(100% / 3); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 3 * 1%); }
   .grid--of-4\@md .grid__cell {
-    flex: 0 0 calc(100% / 4); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 4 * 1%); }
   .grid--of-5\@md .grid__cell {
-    flex: 0 0 calc(100% / 5); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 5 * 1%); }
   .grid--of-6\@md .grid__cell {
-    flex: 0 0 calc(100% / 6); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 6 * 1%); }
   .grid--of-7\@md .grid__cell {
-    flex: 0 0 calc(100% / 7); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 7 * 1%); }
   .grid--of-8\@md .grid__cell {
-    flex: 0 0 calc(100% / 8); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 8 * 1%); }
   .grid--of-9\@md .grid__cell {
-    flex: 0 0 calc(100% / 9); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 9 * 1%); }
   .grid--of-10\@md .grid__cell {
-    flex: 0 0 calc(100% / 10); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 10 * 1%); }
   .grid--of-11\@md .grid__cell {
-    flex: 0 0 calc(100% / 11); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 11 * 1%); }
   .grid--of-12\@md .grid__cell {
-    flex: 0 0 calc(100% / 12); } }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 12 * 1%); } }
 @media (min-width: 1000px) {
   .grid--of-1\@lg .grid__cell {
-    flex: 0 0 calc(100% / 1); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 1 * 1%); }
   .grid--of-2\@lg .grid__cell {
-    flex: 0 0 calc(100% / 2); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 2 * 1%); }
   .grid--of-3\@lg .grid__cell {
-    flex: 0 0 calc(100% / 3); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 3 * 1%); }
   .grid--of-4\@lg .grid__cell {
-    flex: 0 0 calc(100% / 4); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 4 * 1%); }
   .grid--of-5\@lg .grid__cell {
-    flex: 0 0 calc(100% / 5); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 5 * 1%); }
   .grid--of-6\@lg .grid__cell {
-    flex: 0 0 calc(100% / 6); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 6 * 1%); }
   .grid--of-7\@lg .grid__cell {
-    flex: 0 0 calc(100% / 7); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 7 * 1%); }
   .grid--of-8\@lg .grid__cell {
-    flex: 0 0 calc(100% / 8); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 8 * 1%); }
   .grid--of-9\@lg .grid__cell {
-    flex: 0 0 calc(100% / 9); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 9 * 1%); }
   .grid--of-10\@lg .grid__cell {
-    flex: 0 0 calc(100% / 10); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 10 * 1%); }
   .grid--of-11\@lg .grid__cell {
-    flex: 0 0 calc(100% / 11); }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 11 * 1%); }
   .grid--of-12\@lg .grid__cell {
-    flex: 0 0 calc(100% / 12); } }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100 / 12 * 1%); } }
 .grid .grid__cell--1-of-12 {
   width: calc(100% / 12 * 1); }
 .grid .grid__cell--2-of-12 {
