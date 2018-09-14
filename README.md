@@ -54,14 +54,23 @@ Gutter spacing is provided by the `$gutter-spacing` variable in the `_vars.scss`
 Aligning columns inside a grid is acheived with the alignment modifier classes added to the parent `.grid` element:
 
 `.grid--top`: aligns all child elements at top.
+
 `.grid&--middle`: aligns child elements at top.
+
 `.grid&--bottom`: aligns child elements at bottom.
+
 `.grid&--stretch`: stretches child elements to same height.
+
 `.grid&--baseline`: aligns child elements at baseline.
+
 `.grid&--left`: aligns child elements to the left.
+
 `.grid&--center`: centers child elements.
+
 `.grid&--right`: aligns child elements to the right.
+
 `.grid&--between`: spaces child elements across parents distributing empty space between children.
+
 `.grid&--around`: spaces child elements distributing empty space on either side of all children.
 
 ##### Small grid
