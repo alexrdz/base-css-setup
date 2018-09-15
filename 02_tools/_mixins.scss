@@ -3,12 +3,16 @@
   flex-wrap: wrap;
 }
 
+// Note: shorthand property with calc not liked by IE:
+// flex: 1 0 calc(100 / 12 * 1%);
+// works in Firefox and Chrome but not in IE
 @mixin cell {
   box-sizing: border-box;
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: calc(100 / 12 * 1%);
 }
+
 
 @mixin css3-prefix($property, $value) {
   -webkit-#{$property}: #{$value};

@@ -421,7 +421,7 @@ p {
     flex-shrink: 0;
     flex-basis: calc(100 / 12 * 1%); } }
 .grid .grid__cell--fill {
-  flex-grow: 1; }
+  flex-grow: 1 !important; }
 @media (min-width: 550px) {
   .grid--gutters > .grid__cell {
     padding-left: calc(1.5rem / 2);

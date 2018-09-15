@@ -51,7 +51,7 @@ $gutter-spacing: $spacing-1-5;
     }
   
     &--fill { 
-      flex-grow: 1; 
+      flex-grow: 1 !important; 
     }
       
   }
